@@ -20,4 +20,4 @@ from chatapp.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('chatapp.urls', namespace='chatapp')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
